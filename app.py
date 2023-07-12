@@ -156,7 +156,7 @@ class MoneyApp(MDApp):
                         history=v.fetchall()
                         print(history)
                         if(len(history)==0):
-                            yag = yagmail.SMTP('samtech803@gmail.com', '')
+                            yag = yagmail.SMTP('', '') # Enter Email ID and Password
                             contents = ["Your Bank Balance is Low!","Please Deposit Money in your Bank Account! The upcoming payment is of Rs."+str(a[i][4])+" on "+str(a[i][1])+" for "+str(a[i][3])+"!"]
                             yag.send(to=str(emails[0][0]),subject="Your Personal Finance Manager!",contents=contents,attachments='my_logo.jpg')
 
@@ -177,7 +177,7 @@ class MoneyApp(MDApp):
                         history=v.fetchall()
                         print(history)
                         if(len(history)==0):
-                            yag = yagmail.SMTP('samtech803@gmail.com', '')
+                            yag = yagmail.SMTP('', '') # Enter Email ID and Password
                             contents = ["Your Bank Balance is Low!","Please Deposit Money in your Bank Account! The upcoming payment is of Rs."+str(a[i][4])+" on "+str(a[i][1])+" for "+str(a[i][3])+"!"]
                             yag.send(to=str(emails[0][0]),subject="Your Personal Finance Manager!",contents=contents,attachments='my_logo.jpg')
 
